@@ -36,7 +36,7 @@ jobs:
             # changed-files adds backslashes to non-ascii file names.  We need to
             # remove those backslashes before running yamllint
             sanitized_file=$(echo "$file" | sed -e 's/\\//g')
-            
-            # Run yamllint on the sanitized file path
+
+          # Run yamllint on the sanitized file path
             yamllint "$sanitized_file"
           done
